@@ -6,11 +6,11 @@ from datetime import datetime
 import time, datetime, random, sys, re, os, json, subprocess, codecs, threading, glob
 
 cl = TOBY.LINE()
-cl.login(token="EqILfSoo5QOZbIqc5DTc.3VJlu0KS/DixvbhuJSvGta.VXZ0mb5lIjWm1lojtfcdmIfiu6kcxniX+x4R1EvDtKY=")
+cl.login(token="Eqcekl8iXLSbwcMkKVn0.8Yc3rgzqX99L+IbVrXPqea.YUBvrSn2dae9GIC4sNnWpoRj2vLucSyFc2FcxmILqhM=")
 cl.loginResult()
 
 ki = TOBY.LINE()
-ki.login(token="Eqk3cuTkZPLRcp75FbQ9.beygTSQHv5ToHeFKhyMn2q.566xuvoJTk/KaGX7giq/bWBU4DFhymGgiZLDQLN1Oro=")
+ki.login(token="EqILfSoo5QOZbIqc5DTc.3VJlu0KS/DixvbhuJSvGta.VXZ0mb5lIjWm1lojtfcdmIfiu6kcxniX+x4R1EvDtKY=")
 ki.loginResult()
 
 ki2 = TOBY.LINE()
@@ -34,39 +34,35 @@ ki6.login(token="EqnnfqUP86SPPMpJooCd.zHZGSlAv+yK3ymHz30RY7q.6GKjHJq0d6n4hDO5AMc
 ki6.loginResult()
 
 ki7 = TOBY.LINE()
-ki7.login(token="EpsWiefEZcj66jSH3gf6.y5nkSXyWvW5D61Y0E9ZK5G.6AaJgZWZcQkH2ht1lJlTAjElClJsDu9W+DG61GyTLAY=")
+ki7.login(token=" EqZQ5c7AUmInnNWqN8a9./h7DfMMh2OZJ6qx4+R9moq.6CPGpYFBRr/+GFSJS3PlMwmxGfWzgQFXqW66Q1XaxGY=")
 ki7.loginResult()
 
 ki8 = TOBY.LINE()
-ki8.login(token="Epvf4dwvuvEPHr7OcI06.bIyYMtAVJvYBGqFNiOoa9G.WEbXe1r22RO1lImQ5+FPVmaPbTgDbgg0f/66UnqpoDQ=")
+ki8.login(token="EqssqhdZaJz6s1YWyej6.bIyYMtAVJvYBGqFNiOoa9G.mo24WvP6FhJtasrdhfhQdhkiLweTyUUXQKFQ91Uobc8=")
 ki8.loginResult()
 
 ki9 = TOBY.LINE()
-ki9.login(token="Ep5YkoY4xf9KQJAYZqu5.IKqKq6EsaztU/06SlekmXq.LTo5IDYHHfkaDZmeqPd5jR62ykHcfAM9wr3RDb1f84Y=")
+ki9.login(token="EqHYP0zK5AGMIiwJATF5.IKqKq6EsaztU/06SlekmXq.GMnsWovOjezTQnPYsmzhxC9/zFiD9m+/tSlBnf3FRtc=")
 ki9.loginResult()
 
 ki10 = TOBY.LINE()
-ki10.login(token="Ep7yz4gMH2s6jQFPeSU3.q755/APAmye348Cnpw3BqW.sgX32MnjbNXVVsdcgzyEMn+C18UB4B4ZEeIGP5fPZ1c=")
+ki10.login(token="Eqj3JW6Bnqw85vrXvfV3.q755/APAmye348Cnpw3BqW.aUQ2sJrRYU8q5vwPJHvRMNo+VU/Bq0XZcYh9UQHFvl4=")
 ki10.loginResult()
 
 ki11 = TOBY.LINE()
-ki11.login(token="EpkwGHdEWfzKr0j3lzt4.7/a1mB/p50WPAKhDvh0AHa.UEAwtu+IOUb4401MONajtO2kYfEs1LTwkTBiTp1zlBw=")
+ki11.login(token="EqosrUAAkNgq3XRCrEw4.7/a1mB/p50WPAKhDvh0AHa.rBt8JHvSJu9pCk7J61K9cvnlGmw/6QRP2C5myd5r3qc=")
 ki11.loginResult()
 
 ki12 = TOBY.LINE()
-ki12.login(token="EpRJLv2SMyfAFJ8SitB6.wEInoKsML1Nldg79jMwZ9G.J9mR5CE4S0s3jkh6vIx6bzFDSlmvNA/polVNFhVXNrA=")
+ki12.login(token="Equ5xApoYudYPciXowX6.wEInoKsML1Nldg79jMwZ9G.sSgLvGR1glCzJpULHFFPoOFcemFH8HU/j+JzYJIH08I=")
 ki12.loginResult()
 
 ki13 = TOBY.LINE()
-ki13.login(token="EpBKNhnZ8KTxOerFrEW9./h7DfMMh2OZJ6qx4+R9moq.xgd6nSzQfBW7TAttgQacvgiQPrJlAKO7/jQZdewdhQQ=")
+ki13.login(token="Eqgx3a89HoQa9vBAYEE6.y5nkSXyWvW5D61Y0E9ZK5G.z+M/eIc7JuhzKj9u8gTRbKWsHvODxKw0km6qKr5fjiM=")
 ki13.loginResult()
 
-ki14 = TOBY.LINE()
-ki14.login(token="EpN03FZ8CdEe72dbX1td.PX9Uc3NjuhW1FZqQPMmk+q.78rrGns4PMUdI/x2pdfy9umwwshXKTIQQSpIgswgh2w=")
-ki14.loginResult()
-
 ki15 = TOBY.LINE()
-ki15.login(token="EpLi3BxER7ztxAilkHrd.SELnUjow3wY9CHKpnXWEZq.o8Xxsh71KU8VscwqJzVergurZr3LZwi8V90iCf8Pd4g=")
+ki15.login(token="Eq3nVoT4hKBr10Bf6tld.SELnUjow3wY9CHKpnXWEZq.FUrxNQCZo/Z2MlJJDmRDQ+5biwX9vXSJ9NErZSXnHw0=")
 ki15.loginResult()
 
 print("Success")
@@ -145,12 +141,11 @@ ki10mid = ki10.getProfile().mid
 ki11mid = ki11.getProfile().mid
 ki12mid = ki12.getProfile().mid
 ki13mid = ki12.getProfile().mid
-ki14mid = ki12.getProfile().mid
 ki15mid = ki12.getProfile().mid
 
-Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid, ki12mid, ki13mid, ki14mid, ki15mid]
+Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid, ki12mid, ki13mid, ki15mid]
 admsa = "ub1e94db89396dd6cbd72190f371c1ecd"
-admin = [ki7mid, ki8mid, ki9mid,ki10mid,ki11mid,ki12mid, ki13mid, ki14mid]
+admin = [ki7mid, ki8mid, ki9mid,ki10mid,ki11mid,ki12mid, ki13mid]
 wait = {
     'contact': False,
     'autoJoin': True,
@@ -316,8 +311,6 @@ def bot(op):
                                     ki12.sendText(midd, pesan)
                                     time.sleep(timer)
                                     ki13.sendText(midd, pesan)
-                                    time.sleep(timer)
-                                    ki14.sendText(midd, pesan)
                                     time.sleep(timer)
                                     ki15.sendText(midd, pesan)
                                     cl.sendText(msg.to, "Sukses Hspam")
