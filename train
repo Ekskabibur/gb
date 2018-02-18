@@ -61,9 +61,21 @@ ki13 = TOBY.LINE()
 ki13.login(token="Eqgx3a89HoQa9vBAYEE6.y5nkSXyWvW5D61Y0E9ZK5G.z+M/eIc7JuhzKj9u8gTRbKWsHvODxKw0km6qKr5fjiM=")
 ki13.loginResult()
 
+ki14 = TOBY.LINE()
+ki14.login(token="EqSmOq82xSKfToXamajd.PX9Uc3NjuhW1FZqQPMmk+q.BGLm9NfQmU82T6fXenMRooAZgs3V58LlQNZi2ngYfbo=")
+ki14.loginResult()
+
 ki15 = TOBY.LINE()
 ki15.login(token="Eq3nVoT4hKBr10Bf6tld.SELnUjow3wY9CHKpnXWEZq.FUrxNQCZo/Z2MlJJDmRDQ+5biwX9vXSJ9NErZSXnHw0=")
 ki15.loginResult()
+
+ki16 = TOBY.LINE()
+ki16.login(token="EqZeLOQAZ7vw1BeoSNs2.aTn8MntboFIbYZraIpPsmG./lNImgX1OoMkhBYJpAB/rthNUaaBGSKaKD1D5lfJsfI=")
+ki16.loginResult()
+
+ki17 = TOBY.LINE()
+ki17.login(token="Eq7SFryF8s9f0tB7FsDb.C7Q4rV7hwUlhl94Etezo/W.RgZkhhHQpG4CjhawE/7h6+MoCo+UWROanvpEoydbUQk=")
+ki17.loginResult()
 
 print("Success")
 reload(sys)
@@ -140,12 +152,15 @@ ki9mid = ki9.getProfile().mid
 ki10mid = ki10.getProfile().mid
 ki11mid = ki11.getProfile().mid
 ki12mid = ki12.getProfile().mid
-ki13mid = ki12.getProfile().mid
-ki15mid = ki12.getProfile().mid
+ki13mid = ki13.getProfile().mid
+ki14mid = ki14.getProfile().mid
+ki15mid = ki15.getProfile().mid
+ki16mid = ki16.getProfile().mid
+ki17mid = ki17.getProfile().mid
 
-Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid, ki12mid, ki13mid,  ki15mid]
+Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid, ki12mid, ki13mid, ki14mid, ki15mid, ki16mid, ki17mid]
 admsa = "ub1e94db89396dd6cbd72190f371c1ecd"
-admin = [ki7mid, ki8mid, ki9mid,ki10mid,ki11mid,ki12mid, ki13mid]
+admin = [ki7mid, ki8mid, ki9mid,ki10mid,ki11mid,ki12mid, ki13mid, ki14mid, ki16mid, ki17mid]
 wait = {
     'contact': False,
     'autoJoin': True,
@@ -274,52 +289,54 @@ def bot(op):
         elif msg.text is None:
             return
         # -----------------------------------------------
-        elif "Tspam " in msg.text:
-            if msg.from_ in admsa or admin:
-                target = msg.text.replace("Tspam ", "")
-                target2 = target.split()
-                midd = target2[0]
-                if target2[0] == "s1":
-                    midd = "ueff8f78401c867593c6ddc8aeb8c649d"
-                elif target2[0] == "s2":
-                    midd = "u9fec89015e171bc9a8f82ce1ded83075"
-                elif target2[0] == "s3":
-                    midd = "ubb4183ea6b5c541817eaa3e6a8c6acfe"
-                else:
-                    midd = target2[0]
-                jumlah = int(target2[1])
-                pesan = str(target2[2]) + " " + str(target2[3])
-                if jumlah <= 100:
-                    for var in range(0, jumlah):
-                        if (pesan in [" ", " ", " "," ", "/n", None]):
-                            pass
+        elif "Hspam " in msg.text:
+                    if msg.from_ in admsa or admin:
+                        target = msg.text.replace("Hspam ", "")
+                        target2 = target.split()
+                        midd = target2[0]
+                        if target2[0] == "s1":
+                            midd = "ueff8f78401c867593c6ddc8aeb8c649d"
+                        elif target2[0] == "s2":
+                            midd = "u9fec89015e171bc9a8f82ce1ded83075"
+                        elif target2[0] == "s3":
+                            midd = "ubb4183ea6b5c541817eaa3e6a8c6acfe"
                         else:
-                            ki7.findAndAddContactsByMid
-                            timer = random.choice(5, 10, 15, 20, 25, 30, 35, 40, 22, 33, 11, 12, 23, 34)
-                            cl.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki7.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki8.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki9.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki10.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki11.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki12.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki13.sendText(midd, pesan)
-                            time.sleep(timer)
-                            ki15.sendText(midd, pesan)
-                            cl.sendText(msg.to, "Sukses Tspam")
-                            waktu=random.choice(267,214,260,295,137,227,193,162,178,203,214,180,291,278,190,169,204,213,179)
-                            time.sleep(waktu)
-                            print "[notif] Spam chat Mid sukses"
-            else:
-                cl.sendText(msg.to, "Tidak bisa lebih dari seratus")
-                # -----------------------------------------------
+                            midd = target2[0]
+                        jumlah = int(target2[1])
+                        pesan = str(target2[2])+" "+str(target2[3])
+                        if jumlah <= 100:
+                            for var in range(0, jumlah):
+                                if (pesan in [" ", " "," ", "","/n", None]):
+                                    pass
+                                else:
+                                    angka=(5, 10, 15, 20, 25, 30, 35, 40, 22, 33, 11, 12, 23, 34)
+                                    timer = random.choice(angka)
+                                    cl.findAndAddContactsByMid(midd)
+                                    cl.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki7.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki8.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki9.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki10.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki11.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki12.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki13.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki14.sendText(midd, pesan)
+                                    time.sleep(timer)
+                                    ki15.sendText(midd, pesan)
+                                    cl.sendText(msg.to, "Sukses Hspam")
+                                    waktu = random.choice(267, 214, 260, 295, 137, 227, 193, 162, 178, 203, 214, 180,291, 278, 190, 169, 204, 213, 179)
+                                    time.sleep(waktu)
+                                    print "[notif] Spam chat Mid sukses"
+                    else:
+                        cl.sendText(msg.to, "Tidak bisa lebih dari seratus")
 
         if op.type == 19:
             try:
