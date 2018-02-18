@@ -14,7 +14,7 @@ ki.login(token="Eqk3cuTkZPLRcp75FbQ9.beygTSQHv5ToHeFKhyMn2q.566xuvoJTk/KaGX7giq/
 ki.loginResult()
 
 ki2 = TOBY.LINE()
-ki2.login(token="EpzF7BfUaHKgQYg5Rhz9.beygTSQHv5ToHeFKhyMn2q.tQtoCAFte9tAy8EQEbqOUUMifSAMYP/KofJAQykVkQ4=")
+ki2.login(token="Eqk3cuTkZPLRcp75FbQ9.beygTSQHv5ToHeFKhyMn2q.566xuvoJTk/KaGX7giq/bWBU4DFhymGgiZLDQLN1Oro=")
 ki2.loginResult()
 
 ki3 = TOBY.LINE()
