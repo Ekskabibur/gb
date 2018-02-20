@@ -5,11 +5,11 @@ from TOBY.lib.curve.ttypes import *
 from datetime import datetime
 import time, datetime, random, sys, re, os, json, subprocess, codecs, threading, glob
 cl = TOBY.LINE()
-cl.login(token="")
+cl.login(token="EqOXQ4i06LJGMEt9Ra10.8Yc3rgzqX99L+IbVrXPqea.BT2yF9KqvASdoWY4Xen6ySw4FEhItAtaEukEey+qFQg=")
 cl.loginResult()
 
 ki = TOBY.LINE()
-ki.login(token="")
+ki.login(token="Eq1tW76gd3SrTeo5QeSd.SELnUjow3wY9CHKpnXWEZq.2OR3cKcZJqV5IfFFcIK2MBu75pyf0ehCKQNonFplV6g=")
 ki.loginResult()
 
 ki2 = TOBY.LINE()
