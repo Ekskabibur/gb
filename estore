@@ -14,7 +14,7 @@ ki.login(token="Eq1tW76gd3SrTeo5QeSd.SELnUjow3wY9CHKpnXWEZq.2OR3cKcZJqV5IfFFcIK2
 ki.loginResult()
 
 ki2 = TOBY.LINE()
-ki2.login(token="Eq09VDNhoWEQrLT89yx4.7/a1mB/p50WPAKhDvh0AHa.IZvH/tAwI1qkALY8Jyy9jx7zLcuM4kmLxQZCU0HdSXU=")
+ki2.login(token="Eq8S9HvzXKFmHB9mXbT3.q755/APAmye348Cnpw3BqW.oWOhbUFjOBWsqPmYgt6UPxMaZu6qEk+Fdn2brnLAQjM=")
 ki2.loginResult()
 
 ki3 = TOBY.LINE()
@@ -34,7 +34,7 @@ ki6.login(token="EqMsJkuCCeeq8hgJfSG4.7/a1mB/p50WPAKhDvh0AHa.k+IS3vJti0Awtcne89c
 ki6.loginResult()
 
 ki7 = TOBY.LINE()
-ki7.login(token="EqofCD4BAJfublXLGqk3.q755/APAmye348Cnpw3BqW.wiV2ySs+KT9uzKNR4g+7lLFLQ1L8t6Ceo/clp7+OtQE=")
+ki7.login(token="EqC6w0Gf9VVduy38pZm6.bIyYMtAVJvYBGqFNiOoa9G.HudRbGXIMgsSrxQjHBd6oTDQ5Nhq7547+WCHnsdGHS8=")
 ki7.loginResult()
 
 ki8 = TOBY.LINE()
@@ -42,17 +42,8 @@ ki8.login(token="EqMJTKGELDaLNyhqnxJ6.wEInoKsML1Nldg79jMwZ9G.bt1rMJ1w4B3F4OBEApT
 ki8.loginResult()
 
 ki9 = TOBY.LINE()
-ki9.login(token="EqUc5MvHnTHD4SDbMsc9./h7DfMMh2OZJ6qx4+R9moq.PWbvK5R5ccdRiS+wX7EIsRfM4GPxg7Exy2srigpwrwM=")
+ki9.login(token="EqUc5MvHnTHD4SDbMsc9./h7DfMMh2OZJ6qx4+R9moq.PWbvK5R5ccdRiS+wX7ElsRfM4GPxg7Exy2srigpwrwM=")
 ki9.loginResult()
-
-
-ki10 = TOBY.LINE()
-ki10.login(token="Eqj3JW6Bnqw85vrXvfV3.q755/APAmye348Cnpw3BqW.aUQ2sJrRYU8q5vwPJHvRMNo+VU/Bq0XZcYh9UQHFvl4=")
-ki10.loginResult()
-
-ki11 = TOBY.LINE()
-ki11.login(token="EqosrUAAkNgq3XRCrEw4.7/a1mB/p50WPAKhDvh0AHa.rBt8JHvSJu9pCk7J61K9cvnlGmw/6QRP2C5myd5r3qc=")
-ki11.loginResult()
 
 print("Success")
 reload(sys)
@@ -115,7 +106,7 @@ COMMAND IN GROUP
 
 ==========
 """
-KAC = [cl, ki, ki2, ki3, ki4, ki5, ki6, ki7, ki8, ki9,ki10,ki11,ki12]
+KAC = [cl, ki, ki2, ki3, ki4, ki5, ki6, ki7, ki8, ki9]
 mid = cl.getProfile().mid
 kimid = ki.getProfile().mid
 ki2mid = ki2.getProfile().mid
@@ -126,12 +117,10 @@ ki6mid = ki6.getProfile().mid
 ki7mid = ki7.getProfile().mid
 ki8mid = ki8.getProfile().mid
 ki9mid = ki9.getProfile().mid
-ki10mid = ki10.getProfile().mid
-ki11mid = ki11.getProfile().mid
 
-Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid]
+Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid]
 admsa = "ub1e94db89396dd6cbd72190f371c1ecd"
-admin = [ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid]
+admin = [ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid]
 wait = {
     'contact': False,
     'autoJoin': True,
@@ -214,13 +203,9 @@ def bot(op):
                                 time.sleep(timer)
                                 ki9.sendText(midd, pesan)
                                 time.sleep(timer)
-                                ki10.sendText(midd, pesan)
-                                time.sleep(timer)
-                                ki11.sendText(midd, pesan)
-                                time.sleep(timer)
                                 cl.sendText(msg.to, "Sukses Espam")
-                                time.sleep(200)
                                 print "[notif] Spam chat Mid sukses"
+                                time.sleep(200)
                     else:
                         cl.sendText(msg.to, "Tidak bisa lebih dari seratus")
                 else:
