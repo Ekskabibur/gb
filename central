@@ -25,7 +25,7 @@ ki4.login(token="EqbkO6qLwjxZmMSauy12.aTn8MntboFIbYZraIpPsmG.dD3w/bcVApvXr0n7ulr
 ki4.loginResult()
 
 ki5 = TOBY.LINE()
-ki5.login(token="EqitCSHWjlCNPekJi5Ad.PX9Uc3NjuhW1FZqQPMmk+q.QIiQ3vO5DeVJMzv/dGYZQEhWUcgvVRDbZHUXEkWx6Yw=")
+ki5.login(token="Eq06Xl2Tv9uczDwC82dd.PX9Uc3NjuhW1FZqQPMmk+q.yU/v4ZHu8YohUv5IsBzw8UCixka6zKjHEd8zpoLn79o=")
 ki5.loginResult()
 
 ki6 = TOBY.LINE()
@@ -33,7 +33,7 @@ ki6.login(token="EqMsJkuCCeeq8hgJfSG4.7/a1mB/p50WPAKhDvh0AHa.k+IS3vJti0Awtcne89c
 ki6.loginResult()
 
 ki7 = TOBY.LINE()
-ki7.login(token="EqC6w0Gf9VVduy38pZm6.bIyYMtAVJvYBGqFNiOoa9G.HudRbGXIMgsSrxQjHBd6oTDQ5Nhq7547+WCHnsdGHS8=")
+ki7.login(token="EqrUHu1mGU803mt09Kb6.bIyYMtAVJvYBGqFNiOoa9G.4UU7xbmHhK61pfleIm1uNe1e8C0cNPUZCs9DjMRq4gs=")
 ki7.loginResult()
 
 ki8 = TOBY.LINE()
@@ -41,8 +41,20 @@ ki8.login(token="EqMJTKGELDaLNyhqnxJ6.wEInoKsML1Nldg79jMwZ9G.bt1rMJ1w4B3F4OBEApT
 ki8.loginResult()
 
 ki9 = TOBY.LINE()
-ki9.login(token="EqUc5MvHnTHD4SDbMsc9./h7DfMMh2OZJ6qx4+R9moq.PWbvK5R5ccdRiS+wX7ElsRfM4GPxg7Exy2srigpwrwM=")
+ki9.login(token="EqX6Sny5AjtzdceXdb69./h7DfMMh2OZJ6qx4+R9moq.RdUdVzXRp2UYn5ujoh6un7dneeGrf9fkCAeqrshA2KM=")
 ki9.loginResult()
+
+ki10 = TOBY.LINE()
+ki10.login(token="EqlpOClSHtw3V7TjaAh7.FiJp+RUMqxx/hR5AGjJIXW.I/17TvQJTI+9LdU9YrI7why6fsWnacJtIhlW2fSts54=")
+ki10.loginResult()
+
+ki11 = TOBY.LINE()
+ki11.login(token="EqL6iP3f8Q7ZJt2tSMY3.5FUaoDqbRourxQvOXurpeW.avtz1ODSDLnz+YdUT5u/JHk+JPBiZuTJdkBCB9usBMk=")
+ki11.loginResult()
+
+ki12 = TOBY.LINE()
+ki12.login(token="")
+ki12.loginResult()
 
 print("Success")
 reload(sys)
@@ -105,7 +117,7 @@ COMMAND IN GROUP
 
 ==========
 """
-KAC = [cl, ki, ki2, ki3, ki4, ki5, ki6, ki7, ki8, ki9]
+KAC = [cl, ki, ki2, ki3, ki4, ki5, ki6, ki7, ki8, ki9, ki10, ki11]
 mid = cl.getProfile().mid
 kimid = ki.getProfile().mid
 ki2mid = ki2.getProfile().mid
@@ -116,7 +128,9 @@ ki6mid = ki6.getProfile().mid
 ki7mid = ki7.getProfile().mid
 ki8mid = ki8.getProfile().mid
 ki9mid = ki9.getProfile().mid
-Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid]
+ki10mid = ki10.getProfile().mid
+ki11mid = ki11.getProfile().mid
+Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid]
 admsa = "ub1e94db89396dd6cbd72190f371c1ecd"
 admin = [ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid]
 wait = {
@@ -142,9 +156,8 @@ wait = {
     "cancelprotect": False,
     "inviteprotect": False,
     "linkprotect": False,
+    "server":"u9fec89015e171bc9a8f82ce1ded8307"
 }
-
-
 def cms(string, commands):  # /XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
     tex = ["+", "@", "/", ">", ";", "^", "%", "$", "＾", "サテラ:", "サテラ:", "サテラ：", "サテラ："]
     for texX in tex:
@@ -194,7 +207,6 @@ def bot(op):
         if op.type == 26:
             msg = op.message
             if msg.toType == 0:
-                msg.to = msg.from_
                 if msg.from_ in admsa:
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
@@ -255,8 +267,7 @@ def bot(op):
                             cu = ""
                         cl.sendText(msg.to, "[displayName]:\n" + msg.contentMetadata["displayName"] + "\n[mid]:\n" +
                                     msg.contentMetadata[
-                                        "mid"] + "\n[statusMessage]:\n" + contact.statusMessage + "\n[pictureStatus]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[coverURL]:\n" + str(
-                            cu))
+                                        "mid"] + "\n[statusMessage]:\n" + contact.statusMessage + "\n[pictureStatus]:\nhttp://dl.profile.line-cdn.net/" + contact.pictureStatus + "\n[coverURL]:\n" + str(cu))
                     else:
                         contact = cl.getContact(msg.contentMetadata["mid"])
                         try:
@@ -1064,18 +1075,22 @@ def bot(op):
                 cl.sendText(msg.to, "We changed the message")
             elif msg.text.lower() == 'pesan cek':
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,
-                                "Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
+                    cl.sendText(msg.to,"Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
                 else:
-                    cl.sendText(msg.to,
-                                "Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
-            elif "Come Set:" in msg.text:
-                c = msg.text.replace("Come Set:", "")
-                if c in ["", " ", "\n", None]:
+                    cl.sendText(msg.to,"Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
+            elif "Server Set:" in msg.text:
+                c = msg.text.replace("Server Set:", "")
+                if c == 1:
+                    server="ueff8f78401c867593c6ddc8aeb8c649d"
+                elif c == 2:
+                    server="u9fec89015e171bc9a8f82ce1ded8307"
+                elif c ==3:
+                    server="ubb4183ea6b5c541817eaa3e6a8c6acfe"
+                if server in ["", " ", "\n", None]:
                     cl.sendText(msg.to, "Merupakan string yang tidak bisa diubah")
                 else:
-                    wait["comment"] = c
-                    cl.sendText(msg.to, "Ini telah diubah👈\n\n" + c)
+                    wait["server"] = server
+                    cl.sendText(msg.to, "Ini telah diubah👈\n\n" + server)
             elif msg.text in ["Com on", "Com:on", "Comment on"]:
                 if wait["commentOn"] == True:
                     if wait["lang"] == "JP":
@@ -1101,8 +1116,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "To turn off")
             elif msg.text in ["Com", "Comment"]:
-                cl.sendText(msg.to,
-                            "Auto komentar saat ini telah ditetapkan sebagai berikut:👈\n\n" + str(wait["comment"]))
+                cl.sendText(msg.to, "Auto komentar saat ini telah ditetapkan sebagai berikut:👈\n\n" + str(wait["comment"]))
             elif msg.text.lower() == 'url':
                 if msg.toType == 2:
                     g = cl.getGroup(msg.to)
@@ -1797,22 +1811,48 @@ def bot(op):
                 ginfo = cl.getGroup(msg.to)
                 cl.sendText(msg.to, "Selamat Datang Di Grup " + str(ginfo.name))
                 cl.sendText(msg.to, "Owner Grup " + str(ginfo.name) + " :\n" + ginfo.creator.displayName)
-            elif "Hi " in msg.text:
-                bctxt = msg.text.replace("Hi ", "")
-                ki6.sendText(msg.to, (bctxt))
+
             elif "Bot say " in msg.text:
                 if msg.from_ in admsa or admin:
                         bctxt=msg.text.replace("Bot say ", "")
                         cl.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki2.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki3.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki4.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki5.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki6.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki7.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki8.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
                         ki9.sendText(msg.to, (bctxt))
-                    
+                        time.sleep(1.5)
+                        ki10.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
+                        ki11.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
+                        ki12.sendText(msg.to, (bctxt))
+            elif "Room : " in msg.text:
+                    bctxt = msg.text.replace("Room : ", "")
+                    cl.sendText(wait["server"], "/join "+(bctxt))
+                    ki2.sendText(wait["server"], "/join "+(bctxt))
+                    ki3.sendText(wait["server"], "/join "+(bctxt))
+                    ki4.sendText(wait["server"], "/join "+(bctxt))
+                    ki5.sendText(wait["server"], "/join "+(bctxt))
+                    ki6.sendText(wait["server"], "/join "+(bctxt))
+                    ki7.sendText(wait["server"], "/join "+(bctxt))
+                    ki8.sendText(wait["server"], "/join "+(bctxt))
+                    ki9.sendText(wait["server"], "/join "+(bctxt))
+                    ki10.sendText(wait["server"], "/join "+(bctxt))
+                    ki11.sendText(wait["server"], "/join "+(bctxt))
+                    ki12.sendText(wait["server"], "/join "+(bctxt))
+
             elif msg.text.lower() == 'absen':
                 profile = ki2.getProfile()
                 text = profile.displayName + ""
@@ -1838,6 +1878,15 @@ def bot(op):
                 profile = ki9.getProfile()
                 text = profile.displayName + ""
                 ki9.sendText(msg.to, "9 " + text)
+                profile = ki10.getProfile()
+                text = profile.displayName + ""
+                ki10.sendText(msg.to, "10 " + text)
+                profile = ki11.getProfile()
+                text = profile.displayName + ""
+                ki11.sendText(msg.to, "11 " + text)
+                profile = ki12.getProfile()
+                text = profile.displayName + ""
+                ki12.sendText(msg.to, "12 " + text)
             elif "2say: " in msg.text:
                 if msg.from_ in admsa or admin:
                     bctxt=msg.text.replace("2say: ","")
@@ -1870,6 +1919,19 @@ def bot(op):
                 if msg.from_ in admsa or admin:
                     bctxt=msg.text.replace("9say: ","")
                     ki9.sendText(msg.to, (bctxt))
+            elif "10say: " in msg.text:
+                if msg.from_ in admsa or admin:
+                    bctxt = msg.text.replace("9say: ", "")
+                    ki10.sendText(msg.to, (bctxt))
+            elif "say11: " in msg.text:
+                if msg.from_ in admsa or admin:
+                    bctxt = msg.text.replace("9say: ", "")
+                    ki11.sendText(msg.to, (bctxt))
+            elif "say12: " in msg.text:
+                if msg.from_ in admsa or admin:
+                    bctxt = msg.text.replace("9say: ", "")
+                    ki12.sendText(msg.to, (bctxt))
+
             elif msg.text.lower() == 'ping':
                 random.choice(KAC).sendText(msg.to,"Pang Ping Pung Peng Pong \nLu kira ini BBM")
             elif "Spam " in msg.text:
@@ -1904,6 +1966,9 @@ def bot(op):
                                 ki7.sendText(midd, pesan)
                                 ki8.sendText(midd, pesan)
                                 ki9.sendText(midd, pesan)
+                                ki10.sendText(midd, pesan)
+                                ki11.sendText(midd, pesan)
+                                ki12.sendText(midd, pesan)
                                 cl.sendText(msg.to, "Sukses")
                                 print "[notif] Spam chat Mid sukses"
                 else:
