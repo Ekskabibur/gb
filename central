@@ -56,6 +56,14 @@ ki12 = TOBY.LINE()
 ki12.login(token="")
 ki12.loginResult()
 
+ki13 = TOBY.LINE()
+ki13.login(token="")
+ki13.loginResult()
+
+ki14 = TOBY.LINE()
+ki14.login(token="")
+ki14.loginResult()
+
 print("Success")
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -130,9 +138,12 @@ ki8mid = ki8.getProfile().mid
 ki9mid = ki9.getProfile().mid
 ki10mid = ki10.getProfile().mid
 ki11mid = ki11.getProfile().mid
-Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid]
+ki12mid = ki12.getProfile().mid
+ki13mid = ki13.getProfile().mid
+ki14mid = ki14.getProfile().mid
+Bots = [mid, kimid, ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid, ki12mid, ki13mid, ki14mid]
 admsa = "ub1e94db89396dd6cbd72190f371c1ecd"
-admin = [ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid]
+admin = [ki2mid, ki3mid, ki4mid, ki5mid, ki6mid, ki7mid, ki8mid, ki9mid, ki10mid, ki11mid, ki12mid, ki13mid, ki14mid]
 wait = {
     'contact': False,
     'autoJoin': True,
@@ -156,7 +167,8 @@ wait = {
     "cancelprotect": False,
     "inviteprotect": False,
     "linkprotect": False,
-    "server":"u9fec89015e171bc9a8f82ce1ded8307"
+    "server":"u9fec89015e171bc9a8f82ce1ded83075",
+    "battle": True
 }
 def cms(string, commands):  # /XXX, >XXX, ;XXX, ^XXX, %XXX, $XXX...
     tex = ["+", "@", "/", ">", ";", "^", "%", "$", "＾", "サテラ:", "サテラ:", "サテラ：", "サテラ："]
@@ -1078,12 +1090,36 @@ def bot(op):
                     cl.sendText(msg.to,"Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
                 else:
                     cl.sendText(msg.to,"Pesan tambahan otomatis telah ditetapkan sebagai berikut \n\n" + wait["message"])
-            elif "Server Set:" in msg.text:
-                c = msg.text.replace("Server Set:", "")
+            elif msg.text.lower() == 'battle on':
+                if wait["battle"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to, "Battle set to on")
+                    else:
+                        cl.sendText(msg.to, "Battle already on")
+                else:
+                    wait["battle"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to, "Battle set to on")
+                    else:
+                        cl.sendText(msg.to, "Battle already on")
+            elif msg.text.lower() == 'battle off':
+                if wait["battle"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to, "Battle set to off")
+                    else:
+                        cl.sendText(msg.to, "Battle already off")
+                else:
+                    wait["battle"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to, "Battle set to off")
+                    else:
+                        cl.sendText(msg.to, "Battle already off")
+            elif "Server set: " in msg.text:
+                c = msg.text.replace("Server set: ", "")
                 if c == 1:
                     server="ueff8f78401c867593c6ddc8aeb8c649d"
                 elif c == 2:
-                    server="u9fec89015e171bc9a8f82ce1ded8307"
+                    server="u9fec89015e171bc9a8f82ce1ded83075"
                 elif c ==3:
                     server="ubb4183ea6b5c541817eaa3e6a8c6acfe"
                 if server in ["", " ", "\n", None]:
@@ -1838,20 +1874,44 @@ def bot(op):
                         ki11.sendText(msg.to, (bctxt))
                         time.sleep(1.5)
                         ki12.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
+                        ki13.sendText(msg.to, (bctxt))
+                        time.sleep(1.5)
+                        ki14.sendText(msg.to, (bctxt))
+
             elif "Room : " in msg.text:
-                    bctxt = msg.text.replace("Room : ", "")
-                    cl.sendText(wait["server"], "/join "+(bctxt))
-                    ki2.sendText(wait["server"], "/join "+(bctxt))
-                    ki3.sendText(wait["server"], "/join "+(bctxt))
-                    ki4.sendText(wait["server"], "/join "+(bctxt))
-                    ki5.sendText(wait["server"], "/join "+(bctxt))
-                    ki6.sendText(wait["server"], "/join "+(bctxt))
-                    ki7.sendText(wait["server"], "/join "+(bctxt))
-                    ki8.sendText(wait["server"], "/join "+(bctxt))
-                    ki9.sendText(wait["server"], "/join "+(bctxt))
-                    ki10.sendText(wait["server"], "/join "+(bctxt))
-                    ki11.sendText(wait["server"], "/join "+(bctxt))
-                    ki12.sendText(wait["server"], "/join "+(bctxt))
+                if wait("battle")== True:
+                        bctxt = msg.text.replace("Room : ", "")
+                        time.sleep(2.5)
+                        cl.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki2.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki3.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki4.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki5.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki6.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki7.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki8.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki9.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki10.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki11.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki12.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki13.sendText(wait["server"], "/join "+(bctxt))
+                        time.sleep(2.5)
+                        ki14.sendText(wait["server"], "/join "+(bctxt))
+                else:
+                    cl.sendText(admsa, "Battle bot belum dinyalakan")
 
             elif msg.text.lower() == 'absen':
                 profile = ki2.getProfile()
@@ -1887,6 +1947,13 @@ def bot(op):
                 profile = ki12.getProfile()
                 text = profile.displayName + ""
                 ki12.sendText(msg.to, "12 " + text)
+                profile = ki13.getProfile()
+                text = profile.displayName + ""
+                ki13.sendText(msg.to, "13 " + text)
+                profile = ki14.getProfile()
+                text = profile.displayName + ""
+                ki14.sendText(msg.to, "14 " + text)
+
             elif "2say: " in msg.text:
                 if msg.from_ in admsa or admin:
                     bctxt=msg.text.replace("2say: ","")
@@ -1921,16 +1988,24 @@ def bot(op):
                     ki9.sendText(msg.to, (bctxt))
             elif "10say: " in msg.text:
                 if msg.from_ in admsa or admin:
-                    bctxt = msg.text.replace("9say: ", "")
+                    bctxt = msg.text.replace("10say: ", "")
                     ki10.sendText(msg.to, (bctxt))
-            elif "say11: " in msg.text:
+            elif "Say11: " in msg.text:
                 if msg.from_ in admsa or admin:
-                    bctxt = msg.text.replace("9say: ", "")
+                    bctxt = msg.text.replace("Say11: ", "")
                     ki11.sendText(msg.to, (bctxt))
-            elif "say12: " in msg.text:
+            elif "Say12: " in msg.text:
                 if msg.from_ in admsa or admin:
-                    bctxt = msg.text.replace("9say: ", "")
+                    bctxt = msg.text.replace("Say12: ", "")
                     ki12.sendText(msg.to, (bctxt))
+            elif "Say13: " in msg.text:
+                if msg.from_ in admsa or admin:
+                    bctxt = msg.text.replace("Say13: ", "")
+                    ki13.sendText(msg.to, (bctxt))
+            elif "Say14: " in msg.text:
+                if msg.from_ in admsa or admin:
+                    bctxt = msg.text.replace("Say14: ", "")
+                    ki14.sendText(msg.to, (bctxt))
 
             elif msg.text.lower() == 'ping':
                 random.choice(KAC).sendText(msg.to,"Pang Ping Pung Peng Pong \nLu kira ini BBM")
